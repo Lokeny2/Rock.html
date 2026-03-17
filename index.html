@@ -3,88 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors - Professional Edition</title>
+    <title>👊 - ✋ - Scissors Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="hero">
-        <div class="game-container">
-            <h1>🎮 R-P-S Game 🎮</h1>
-            
-            <div class="score-board">
-                <div class="score">You <span id="player-score">0</span></div>
-                <div class="score">CPU <span id="cpu-score">0</span></div>
-            </div>
-
-            <div class="display" id="display-area">
-                <div class="move-display">
-                    <span id="player-emoji">🤔</span>
-                    <span>VS</span>
-                    <span id="cpu-emoji">🤖</span>
-                </div>
-                <p id="message">First to 10 wins!</p>
-                <p id="result-text">Make your move!</p>
-            </div>
-
-            <div class="choices">
-                <button class="choice-btn" id="rock" title="Press R">👊</button>
-                <button class="choice-btn" id="paper" title="Press P">✋</button>
-                <button class="choice-btn" id="scissors" title="Press S">✌️</button>
-            </div>
-
-            <button class="reset-btn" id="reset">🔄 Play Again</button>
-            
-            <div class="keyboard-hint">
-                <span>R</span>ock | <span>P</span>aper | <span>S</span>cissors
-            </div>
-        </div>
-
-        <div class="scroll-hint" onclick="document.getElementById('scoreboard').scrollIntoView({behavior: 'smooth'})">
-            <span>👇</span>
-            <small>View Stats</small>
-        </div>
+<div class="main-card">
+    <div class="career-bar">
+        <span>Wins: <b id="c-wins">0</b></span>
+        <span>Losses: <b id="c-losses">0</b></span>
+        <span>Rate: <b id="c-rate">0%</b></span>
+        <button id="reset-stats-btn">[RESET STATS]</button>
     </div>
 
-    <div class="scoreboard-section" id="scoreboard">
-        <div class="scoreboard-container">
-            <div class="scoreboard-header">
-                <h2>📊 Career Stats</h2>
-                <button class="reset-stats-btn" id="reset-stats">Reset</button>
-            </div>
+    <h1>R-P-S Game</h1>
 
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-label">🏆 Total Games</span>
-                    <span class="stat-value" id="total-games">0</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-label">✅ Wins</span>
-                    <span class="stat-value" id="total-wins">0</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-label">❌ Losses</span>
-                    <span class="stat-value" id="total-losses">0</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-label">🤝 Ties</span>
-                    <span class="stat-value" id="total-ties">0</span>
-                </div>
-            </div>
-
-            <div class="win-rate">
-                <span class="win-rate-percentage" id="win-rate">0%</span>
-                <span class="win-rate-label">Win Rate</span>
-            </div>
-
-            <div class="recent-games">
-                <h3>📝 Recent Games</h3>
-                <div class="recent-list" id="recent-list">
-                    </div>
-            </div>
-        </div>
+    <div class="score-display">
+        <div>You <span id="p-score">0</span></div>
+        <div>CPU <span id="cpu-score">0</span></div>
     </div>
 
-    <script src="script.js"></script>
+    <div class="battle-view" id="battle-view">
+        <div class="emojis">
+            <span id="p-emoji">🤔</span> VS <span id="cpu-emoji">🤖</span>
+        </div>
+        <div id="result-text">Ready?</div>
+    </div>
+
+    <div class="choices">
+        <button class="choice-btn" id="rock">👊</button>
+        <button class="choice-btn" id="paper">✋</button>
+        <button class="choice-btn" id="scissors">✌️</button>
+    </div>
+
+    <button class="reset-btn" id="reset-game-btn">Restart Round</button>
+</div>
+
+<script src="script.js"></script>
 </body>
-  </html>
+</html>
